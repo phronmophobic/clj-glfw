@@ -1,0 +1,10 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        com.phronemophobic/clong {:mvn/version "0.9.0"}
+        net.java.dev.jna/jna {:mvn/version "5.12.1"}}
+ :aliases
+ {
+  :project
+  {:jvm-opts ["-Djna.library.path=./glfw-3.3.8.bin.MACOS/lib-arm64:../llvm-project/build/out/lib:/opt/local/lib"]
+   :extra-deps {com.phronemophobic/clong {:local/root "../clong"}}}
+}}
